@@ -11,7 +11,7 @@ public class ProjectileCreator : MonoBehaviour
     private Player _player;
 
     public Player Player => _player == null ? _player = GetComponentInParent<Player>() : _player;
-    public const string PROJECTILE_POOL_ID = "BallProjectile";
+    public const string PROJECTILE_POOL_ID = "Human";
 
 
     [SerializeField] private Transform _projectileSpawnPoint;

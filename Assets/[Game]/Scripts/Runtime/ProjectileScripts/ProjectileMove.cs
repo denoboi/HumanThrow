@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 public class ProjectileMove : MonoBehaviour
 {
@@ -18,13 +19,14 @@ public class ProjectileMove : MonoBehaviour
     {
         MoveProjectile();
     }
-
+    
+    [Button]
     private void MoveProjectile()
     {
         if (!_canShoot) return;
         
-        transform.Translate( Projectile.Direction * _speed * Time.deltaTime);
-       
+        //transform.Translate( Projectile.Direction * _speed * Time.deltaTime);
+      // GetComponent<RagdollController>().EnableRagdollWithForce(Vector3.forward, _speed);
         
     }
     
