@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 146559426535993465}
   - component: {fileID: 146559426535993470}
   - component: {fileID: 146559426535993471}
-  - component: {fileID: 146559426535993468}
+  - component: {fileID: 9126927686196666849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementData: {fileID: 11400000, guid: f8ab1dd23c4e8b54089a1d30cb4b8aee, type: 2}
   MainCollider: {fileID: 146559427853620105}
---- !u!114 &146559426535993468
+--- !u!114 &9126927686196666849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 146559426535993469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d04e8992a604b144a951206cb53ef61, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f7e6e27b17eabc4d90f74832eef2d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnSlideStart:
@@ -446,7 +446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clampData: {fileID: 11400000, guid: 39757756a46dbcc49bbffb3aa3e1d017, type: 2}
   EnableBodyRotation: 1
-  RotateBody: {fileID: 0}
+  RotateBody: {fileID: 396904425127869330}
   Use:
     Filter: 0
     IgnoreStartedOverGui: 0
@@ -468,9 +468,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.25
-  m_Height: 2
+  m_Height: 1.1453658
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.5726829, z: 0}
 --- !u!1 &369582212439043797
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ Animator:
   m_GameObject: {fileID: 1065601402282615080}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: eaa86861116c68f428dc4f2bec6af85c, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 93f02c56eccf37943a1cc6814fc2912b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1749,7 +1749,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1132848350180146484, guid: eaa86861116c68f428dc4f2bec6af85c, type: 3}
+  - {fileID: 2100000, guid: b62c703c357f0c3429467565d7a125ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
