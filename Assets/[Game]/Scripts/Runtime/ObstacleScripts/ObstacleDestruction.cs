@@ -6,11 +6,14 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ObstacleDestruction : MonoBehaviour
+public class ObstacleDestruction : MonoBehaviour, IBreakable
 {
     [SerializeField] private GameObject[] _obstaclePieces;
     [SerializeField] private ParticleSystem _destructionParticle;
 
+    public int ObstacleLevel;
+    
+    
     private bool _isCollided { get; set; }
     
     private void Awake()
@@ -28,13 +31,15 @@ public class ObstacleDestruction : MonoBehaviour
     }
 
     [Button]
-    private void DestructWall()
+    public void DestructObsacle()
     {
-        foreach (var wall in _obstaclePieces)
+        foreach (var obstacle in _obstaclePieces)
         {
-            wall.GetComponent<Rigidbody>().isKinematic = false;
-            wall.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), Random.Range(-1, 2)) * 200);
+            obstacle.GetComponent<Rigidbody>().isKinematic = false;
+            obstacle.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), Random.Range(-1, 2)) * 200);
         }
+        
+        HapticManager.Haptic(HapticTypes.RigidImpact);
     }
     
     private void OnTriggerEnter(Collider other)
@@ -47,11 +52,7 @@ public class ObstacleDestruction : MonoBehaviour
             _isCollided = true;
             Debug.Log(other.name);
             
-            DestructWall();
-            
-
            
-            HapticManager.Haptic(HapticTypes.RigidImpact);
             //DestructionParticle();
         }
     }

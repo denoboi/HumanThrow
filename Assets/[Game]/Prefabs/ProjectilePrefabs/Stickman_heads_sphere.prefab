@@ -740,6 +740,7 @@ GameObject:
   - component: {fileID: 7386971984596900033}
   - component: {fileID: 2642417305384599082}
   - component: {fileID: -5395368763578625085}
+  - component: {fileID: 2139015309179112704}
   - component: {fileID: 7810759151016211117}
   m_Layer: 12
   m_Name: Stickman_heads_sphere
@@ -840,6 +841,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 59.5
+--- !u!114 &2139015309179112704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592876449704463762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2837555a80f0d4481f06c1ea936b59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &7810759151016211117
 Rigidbody:
   m_ObjectHideFlags: 0

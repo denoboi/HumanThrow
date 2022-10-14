@@ -2,14 +2,31 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using HCB.PoolingSystem;
+using TMPro;
 using UnityEngine;
 
 public class ProjectileCollision : MonoBehaviour
 {
+    private bool _isCollided;
     private void OnTriggerEnter(Collider other)
     {
-      
-       
-       
+        ObstacleDestruction breakable = other.GetComponentInParent<ObstacleDestruction>();
+        
+        
+        
+        if (breakable != null)
+        {
+            _isCollided = true;
+            GetComponentInChildren<TextMeshPro>().text = breakable.ObstacleLevel.ToString();
+            breakable.ObstacleLevel--;
+            
+            Debug.Log("Carptii");
+
+            if (breakable.ObstacleLevel <= 0)
+            {
+                breakable.DestructObsacle();
+            }
+        }
+
     }
 }
