@@ -8,23 +8,31 @@ using UnityEngine;
 public class ProjectileCollision : MonoBehaviour
 {
     private bool _isCollided;
+    
     private void OnTriggerEnter(Collider other)
     {
         ObstacleDestruction breakable = other.GetComponentInParent<ObstacleDestruction>();
         
         
         
-        if (breakable != null)
+        if (breakable != null && !_isCollided)
         {
             _isCollided = true;
-            GetComponentInChildren<TextMeshPro>().text = breakable.ObstacleLevel.ToString();
+          
             breakable.ObstacleLevel--;
+            breakable.OnHit.Invoke();
+            
+        
+            
             
             Debug.Log("Carptii");
 
             if (breakable.ObstacleLevel <= 0)
             {
+                breakable.ObstacleLevel = 0;
                 breakable.DestructObsacle();
+                
+                //Destroy(other.gameObject);
             }
         }
 

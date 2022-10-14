@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using HCB.Core;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class ObstacleDestruction : MonoBehaviour, IBreakable
@@ -11,9 +12,11 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
     [SerializeField] private GameObject[] _obstaclePieces;
     [SerializeField] private ParticleSystem _destructionParticle;
 
-    public int ObstacleLevel;
+    public int ObstacleLevel = 3;
     
-    
+    [HideInInspector]
+    public UnityEvent OnHit = new UnityEvent();
+
     private bool _isCollided { get; set; }
     
     private void Awake()
@@ -42,18 +45,5 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
         HapticManager.Haptic(HapticTypes.RigidImpact);
     }
     
-    private void OnTriggerEnter(Collider other)
-    {
-        
-        Ragdoll projectile = other.GetComponentInChildren<Ragdoll>();
-        
-        if (projectile != null && !_isCollided)
-        {
-            _isCollided = true;
-            Debug.Log(other.name);
-            
-           
-            //DestructionParticle();
-        }
-    }
+    
 }
