@@ -416,7 +416,6 @@ GameObject:
   - component: {fileID: 2260749240069670913}
   - component: {fileID: 7840499068902981411}
   - component: {fileID: 2799911632741583441}
-  - component: {fileID: 6372095457814702073}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -575,19 +574,6 @@ MonoBehaviour:
   m_maskType: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!65 &6372095457814702073
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232072170503074818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.28194618, y: 0.32707465, z: 0}
-  m_Center: {x: -0.0019786507, y: -0.004092872, z: 0}
 --- !u!1 &1453994143052359024
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
     [SerializeField] private ParticleSystem _destructionParticle;
 
     public int ObstacleLevel = 3;
+
+    private BoxCollider _collider;
+    public BoxCollider Collider => _collider == null ? _collider = GetComponentInChildren<BoxCollider>() : _collider;
     
     [HideInInspector]
     public UnityEvent OnHit = new UnityEvent();
@@ -36,11 +39,15 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
     [Button]
     public void DestructObsacle()
     {
+        Collider.enabled = false;
         foreach (var obstacle in _obstaclePieces)
         {
             obstacle.GetComponent<Rigidbody>().isKinematic = false;
             obstacle.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), Random.Range(-1, 2)) * 200);
+           
+
         }
+
         
         HapticManager.Haptic(HapticTypes.RigidImpact);
     }

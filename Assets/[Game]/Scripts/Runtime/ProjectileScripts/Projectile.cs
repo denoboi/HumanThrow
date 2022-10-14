@@ -21,13 +21,15 @@ public class Projectile : MonoBehaviour
 
     
     public Vector3 Direction { get; private set; }
-    
+
+    public float ForceAmount { get; set; }
     
     public void Initialize(Vector3 direction)
     {
         Direction = direction;
         Rigidbody.isKinematic = true;
-        RagdollController.EnableRagdollWithForce(Vector3.forward, 2000);
+        transform.localScale = new Vector3(0.01f, .01f, .01f);
+        RagdollController.EnableRagdollWithForce(Vector3.forward, 500);
         OnInitialized.Invoke();
     }
 

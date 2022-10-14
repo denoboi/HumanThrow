@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 146559426535993465}
   - component: {fileID: 146559426535993471}
   - component: {fileID: 9126927686196666849}
+  - component: {fileID: 5216275361418588140}
   - component: {fileID: 146559427514108361}
   - component: {fileID: 146559427514108362}
   - component: {fileID: 146559426535993470}
@@ -147,6 +148,19 @@ MonoBehaviour:
   OnSlideStop:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5216275361418588140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146559426535993469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511d193b072f8064eb3f1a13140f46d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCollider: {fileID: 146559427853620105}
 --- !u!114 &146559427514108361
 MonoBehaviour:
   m_ObjectHideFlags: 0

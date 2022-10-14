@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HCB.Core;
 using HCB.PoolingSystem;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class ProjectileCollision : MonoBehaviour
         if (breakable != null && !_isCollided)
         {
             _isCollided = true;
+            HapticManager.Haptic(HapticTypes.SoftImpact);
           
             breakable.ObstacleLevel--;
             breakable.OnHit.Invoke();
@@ -31,6 +33,7 @@ public class ProjectileCollision : MonoBehaviour
             {
                 breakable.ObstacleLevel = 0;
                 breakable.DestructObsacle();
+                
                 
                 //Destroy(other.gameObject);
             }

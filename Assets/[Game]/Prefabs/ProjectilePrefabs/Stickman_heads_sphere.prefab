@@ -841,6 +841,7 @@ GameObject:
   - component: {fileID: -5075693777927079912}
   - component: {fileID: 2642417305384599082}
   - component: {fileID: -5395368763578625085}
+  - component: {fileID: 7605410209791948410}
   m_Layer: 12
   m_Name: Stickman_heads_sphere
   m_TagString: Untagged
@@ -857,7 +858,7 @@ Transform:
   m_GameObject: {fileID: 8592876449704463762}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 1.3608315, z: 2.6294382}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 8592876449704432120}
   - {fileID: 8592876449704432114}
@@ -927,6 +928,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 59.5
+--- !u!114 &7605410209791948410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592876449704463762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5fd4f2394c19d4b91d84f69ea4039a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8592876449704463764
 GameObject:
   m_ObjectHideFlags: 0
