@@ -8,7 +8,7 @@ public class ProjectileScale : MonoBehaviour
 {
    private Projectile _projectile;
 
-   public Projectile Projectile => _projectile == null ? _projectile = GetComponent<Projectile>() : _projectile;
+   public Projectile Projectile => _projectile == null ? _projectile = GetComponentInParent<Projectile>() : _projectile;
    private void OnEnable()
    {
       Projectile.OnInitialized.AddListener(ChangeScale);

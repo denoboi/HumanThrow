@@ -28,7 +28,7 @@ public class Projectile : MonoBehaviour
     {
         Direction = direction;
         Rigidbody.isKinematic = true;
-        transform.localScale = new Vector3(0.01f, .01f, .01f);
+        //transform.localScale = new Vector3(0.01f, .01f, .01f);
         RagdollController.EnableRagdollWithForce(Vector3.forward, 500);
         OnInitialized.Invoke();
     }

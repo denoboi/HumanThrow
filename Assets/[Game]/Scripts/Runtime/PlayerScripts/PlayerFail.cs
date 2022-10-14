@@ -19,7 +19,7 @@ public class PlayerFail : MonoBehaviour
     [SerializeField] private Collider _mainCollider;
    
 
-    private const float PUSH_FORCE = 175f;
+    private const float PUSH_FORCE = 185f;
     private const float PUSH_DURATION = 0.75f;
 
     private Run _pushRun = null;
