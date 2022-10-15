@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8475320319740837092}
   - component: {fileID: 8475320319740837091}
   - component: {fileID: 1646211710810225244}
+  - component: {fileID: 3852596844440083328}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -211,3 +212,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RateUsLevelHolder:
     targetLevels: 040000000a0000000f000000
+--- !u!114 &3852596844440083328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475320320636346290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d8b5b0509df494dbeacb9ca0dea557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

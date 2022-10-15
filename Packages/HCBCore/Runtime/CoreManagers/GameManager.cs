@@ -26,7 +26,7 @@ namespace HCB.Core
 
     public class GameManager : Singleton<GameManager>
     {
-
+        
         private PlayerData playerData;
         [ShowInInspector]
         public PlayerData PlayerData
