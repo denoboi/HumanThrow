@@ -12,10 +12,24 @@ public class ProjectileMove : MonoBehaviour
         get { return _projectile == null ? _projectile = GetComponentInChildren<Projectile>() : _projectile; }
     }
 
+    private void OnEnable()
+    {
+       // Projectile.OnInitialized.AddListener(MoveProjectile);
+    }
+
+    private void OnDisable()
+    {
+        //Projectile.OnInitialized.RemoveListener(MoveProjectile);
+    }
+
+    private Rigidbody _rb;
+
+    public Rigidbody Rigidbody => _rb == null ? _rb = GetComponent<Rigidbody>() : _rb;
+
     private bool _canShoot = true;
     [SerializeField] private float _speed = 50f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         MoveProjectile();
     }
@@ -23,9 +37,9 @@ public class ProjectileMove : MonoBehaviour
     [Button]
     private void MoveProjectile()
     {
-        if (!_canShoot) return;
+        //if (!_canShoot) return;
         
-        //transform.Translate( Projectile.Direction * _speed * Time.deltaTime);
+        Rigidbody.AddForce(Vector3.forward * _speed); 
       // GetComponent<RagdollController>().EnableRagdollWithForce(Vector3.forward, _speed);
         
     }
