@@ -3653,7 +3653,7 @@ PrefabInstance:
     - target: {fileID: 146559427514108361, guid: 99de4c88b580e87458bf8861d752c9e1, type: 3}
       propertyPath: _projectile
       value: 
-      objectReference: {fileID: 2642417305384599082, guid: 6b5d591dbb72ac04a80d42bbb710cb7a, type: 3}
+      objectReference: {fileID: 7795285165601079079, guid: 6b5d591dbb72ac04a80d42bbb710cb7a, type: 3}
     - target: {fileID: 7595770107094060907, guid: 99de4c88b580e87458bf8861d752c9e1, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

@@ -14,12 +14,12 @@ public class ProjectileMove : MonoBehaviour
 
     private void OnEnable()
     {
-       // Projectile.OnInitialized.AddListener(MoveProjectile);
+        Projectile.OnInitialized.AddListener(MoveProjectile);
     }
 
     private void OnDisable()
     {
-        //Projectile.OnInitialized.RemoveListener(MoveProjectile);
+        Projectile.OnInitialized.RemoveListener(MoveProjectile);
     }
 
     private Rigidbody _rb;
@@ -31,7 +31,7 @@ public class ProjectileMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveProjectile();
+       // MoveProjectile();
     }
     
     [Button]
@@ -39,7 +39,7 @@ public class ProjectileMove : MonoBehaviour
     {
         //if (!_canShoot) return;
         
-        Rigidbody.AddForce(Vector3.forward * _speed); 
+        Rigidbody.AddForce(Vector3.forward * _speed, ForceMode.Impulse); 
       // GetComponent<RagdollController>().EnableRagdollWithForce(Vector3.forward, _speed);
         
     }
