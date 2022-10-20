@@ -271,7 +271,7 @@ MonoBehaviour:
     props:
       group: 1
       mappingWeight: 1
-      pinWeight: 0
+      pinWeight: 1
       muscleWeight: 1
       muscleDamper: 1
       internalCollisionIgnores:
@@ -303,7 +303,7 @@ MonoBehaviour:
     props:
       group: 1
       mappingWeight: 1
-      pinWeight: 0
+      pinWeight: 1
       muscleWeight: 1
       muscleDamper: 1
       internalCollisionIgnores:

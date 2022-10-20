@@ -18,6 +18,12 @@ public class ProjectileShoot : MonoBehaviour
         }
     }
 
+    private PlayerFireRate _playerFireRate;
+
+    public PlayerFireRate PlayerFireRate => _playerFireRate == null
+        ? _playerFireRate = GetComponentInParent<PlayerFireRate>()
+        : _playerFireRate;
+
     
     private bool _isGameStarted;
     private bool _isGameEnd;
@@ -52,7 +58,7 @@ public class ProjectileShoot : MonoBehaviour
 
     private void ProjectileSpawnRate()
     {
-       // SpawnRate = 1 / PlayerFireRate.FireRate;
+       SpawnRate = 1 / PlayerFireRate.FireRate;
     }
 
     private void SpawnProjectile()

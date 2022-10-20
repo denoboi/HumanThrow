@@ -18,7 +18,8 @@ namespace HCB.Core
         
         public static UnityEvent OnPlayerFailed = new UnityEvent();
 
-        
+        public static UnityEvent OnFireRateGateInteracted = new UnityEvent();
+
 
         #region Editor
         public static UnityEvent OnLevelDataChange = new UnityEvent();
