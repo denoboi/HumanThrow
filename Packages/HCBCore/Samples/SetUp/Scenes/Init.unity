@@ -152,13 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073e548914439214d93b56c61e3b4f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SourceObjects:
-  - ID: Human
-    SourcePrefab: {fileID: 8592876449704463762, guid: 6b5d591dbb72ac04a80d42bbb710cb7a, type: 3}
-    MinNumberOfObject: 0
-    AllowGrow: 1
-    AutoDestroy: 1
-    clones: []
+  SourceObjects: []
   DefaultCount: 10
 --- !u!4 &334324349
 Transform:

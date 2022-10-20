@@ -90,6 +90,12 @@ namespace HCB.PoolingSystem
                 {
                     for (int j = 0; j < SourceObjects[i].clones.Count; j++)
                     {
+                        if (SourceObjects[i].clones[j] == null)
+                        {
+                            SourceObjects[i].clones.RemoveAt(j);
+                            continue;
+                        }
+                        
                         if (!SourceObjects[i].clones[j].activeInHierarchy)
                         {
                             SourceObjects[i].clones[j].SetActive(true);

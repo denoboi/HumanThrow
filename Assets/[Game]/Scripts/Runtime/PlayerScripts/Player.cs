@@ -5,5 +5,7 @@ using UnityEngine;
 
 public class Player : SplineCharacter
 {
-    public bool IsFailed { get; private set; }
+    public bool IsFailed { get; set; }
+    
+    
 }
