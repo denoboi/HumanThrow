@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HCB.Core;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
@@ -14,11 +15,15 @@ public class ProjectileMove : MonoBehaviour
 
     private void OnEnable()
     {
+        if (Projectile == null)
+            return;
         Projectile.OnInitialized.AddListener(MoveProjectile);
     }
 
     private void OnDisable()
     {
+        if (Projectile == null)
+            return;
         Projectile.OnInitialized.RemoveListener(MoveProjectile);
     }
 
