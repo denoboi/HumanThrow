@@ -37,11 +37,15 @@ public class GateFade : MonoBehaviour
 
     private void OnEnable()
     {
+        if (Gate == null)
+            return;
         Gate.OnInteracted.AddListener(() => FadeOut(INTERACTED_FADE));
     }
 
     private void OnDisable()
     {
+        if (Gate == null)
+            return;
         Gate.OnInteracted.RemoveListener(() => FadeOut(INTERACTED_FADE));
     }    
 

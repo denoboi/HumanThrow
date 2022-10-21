@@ -24,10 +24,10 @@ public class Projectile : MonoBehaviour
 
     public float ForceAmount { get; set; }
     
-    public void Initialize()
+    public void Initialize(Vector3 direction)
     {
-        //Direction = direction;
-        //Rigidbody.isKinematic = true;
+        Direction = direction;
+        
         //transform.localScale = new Vector3(0.01f, .01f, .01f);
        
         OnInitialized.Invoke();

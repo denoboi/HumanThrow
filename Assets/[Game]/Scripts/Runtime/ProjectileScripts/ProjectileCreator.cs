@@ -25,7 +25,7 @@ public class ProjectileCreator : MonoBehaviour
         Projectile projectile = Instantiate(_projectile, _projectileSpawnPoint.position, _projectile.transform.rotation)
             .GetComponentInChildren<Projectile>();
         
-        projectile.Initialize();
+        projectile.Initialize(Vector3.forward);
         
         return projectile;
     }

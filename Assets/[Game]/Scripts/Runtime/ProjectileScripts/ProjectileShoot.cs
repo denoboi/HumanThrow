@@ -23,6 +23,18 @@ public class ProjectileShoot : MonoBehaviour
     public PlayerFireRate PlayerFireRate => _playerFireRate == null
         ? _playerFireRate = GetComponentInParent<PlayerFireRate>()
         : _playerFireRate;
+    
+    private PlayerSpreadShot _playerSpreadShot;
+
+    public PlayerSpreadShot PlayerSpreadShot
+    {
+        get
+        {
+            return _playerSpreadShot == null
+                ? _playerSpreadShot = GetComponentInChildren<PlayerSpreadShot>()
+                : _playerSpreadShot;
+        }
+    }
 
     
     private bool _isGameStarted;
@@ -75,9 +87,9 @@ public class ProjectileShoot : MonoBehaviour
         {
             ProjectileCreator.CreateProjectile();
 
-            //if (PlayerSpreadShot.IsSpreadShotEnabled)
+            if (PlayerSpreadShot.IsSpreadShotEnabled)
             {
-               // PlayerSpreadShot.SpreadShotSpawn();
+                PlayerSpreadShot.SpreadShotSpawn();
             }
 
             _timer = 0;

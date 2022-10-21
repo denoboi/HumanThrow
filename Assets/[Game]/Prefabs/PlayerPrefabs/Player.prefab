@@ -78,6 +78,8 @@ GameObject:
   - component: {fileID: 146559427514108362}
   - component: {fileID: 4594130665897434600}
   - component: {fileID: 6595753555980448695}
+  - component: {fileID: 394108616512946055}
+  - component: {fileID: 2783787231824585096}
   - component: {fileID: 146559426535993470}
   m_Layer: 0
   m_Name: Player
@@ -214,6 +216,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d31512ec5826e645ad95e2965845fd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idleStat: {fileID: 0}
+--- !u!114 &394108616512946055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146559426535993469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c122af93693616479f7a27732bfbb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2783787231824585096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146559426535993469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c5d7b363ced1e4297765f229b1eee0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyTime: 0.2
 --- !u!114 &146559426535993470
 MonoBehaviour:
   m_ObjectHideFlags: 0
