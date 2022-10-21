@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1065274462331809079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572120736467096666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37fdfd37ba0214e4ea5418a079f33a53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &6657434802881459892
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1240693214334673646, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_Name
+      value: FireRate Gate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240693214334673647, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165445779025090228, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_text
+      value: FIRE Rate
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165445779025090228, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_fontSize
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489213996981900868, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1.5491
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489213996981900868, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.6585
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489213996981900868, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8489213996981900868, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.136
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+--- !u!1 &5572120736467096666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1240693214334673646, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+  m_PrefabInstance: {fileID: 6657434802881459892}
+  m_PrefabAsset: {fileID: 0}

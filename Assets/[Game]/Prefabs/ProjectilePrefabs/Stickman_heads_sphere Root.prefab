@@ -431,7 +431,7 @@ MonoBehaviour:
     props:
       group: 1
       mappingWeight: 1
-      pinWeight: 1
+      pinWeight: 0.299
       muscleWeight: 1
       muscleDamper: 1
       internalCollisionIgnores:
@@ -3534,7 +3534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497c91bdbe6e58042a31c2d034efbfe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 9.43
+  _speed: 10.11
 --- !u!114 &3008420416992886600
 MonoBehaviour:
   m_ObjectHideFlags: 0

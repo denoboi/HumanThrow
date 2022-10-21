@@ -15,6 +15,7 @@ public class FireRateGate : GateBase
          HapticManager.Haptic(HapticTypes.Selection);
 
          HCB.Core.EventManager.OnFireRateGateInteracted.Invoke();
+         OnInteracted.Invoke();
          Debug.Log("FireRate");
       }
    }
