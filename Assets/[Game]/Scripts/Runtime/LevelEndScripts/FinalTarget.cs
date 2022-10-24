@@ -19,16 +19,17 @@ public class FinalTarget : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //GunHolder gun = other.GetComponent<GunHolder>();
-        //if (gun != null)
+        Player _player = other.GetComponentInParent<Player>();
+        Projectile projectile = other.GetComponent<Projectile>();
+        if (_player != null)
         {
-            //StopCoroutine(_collider.GetComponent<AutoDestroyer>().myCoroutine);
+            
             Destroy(_collider);
-            //gun.enabled = false;
-            //GameManager.Instance.OnStageSuccess.Invoke();
+            _player.IsWin = true;
+            GameManager.Instance.OnStageSuccess.Invoke();
         }
 
-       // else if (other.gameObject.tag == "FiredBullet")
+        else if (projectile != null)
         {
            
             FireControl(other.gameObject);
@@ -51,7 +52,7 @@ public class FinalTarget : MonoBehaviour
         if (_durability == 0)
         {
             Destroy(_collider);
-            transform.DOLocalRotate(new Vector3(90, 0, 0), 0.1f);
+            transform.DOLocalRotate(new Vector3(90, 0, 0), 0.2f);
             _durabilityText.gameObject.SetActive(false);
             
         }

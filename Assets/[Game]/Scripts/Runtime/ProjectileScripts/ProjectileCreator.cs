@@ -19,7 +19,7 @@ public class ProjectileCreator : MonoBehaviour
 
     public Projectile CreateProjectile()
     {
-        if (Player.IsFailed)
+        if (Player.IsFailed && Player.IsWin)
             return null;
 
         Projectile projectile = Instantiate(_projectile, _projectileSpawnPoint.position, _projectile.transform.rotation)

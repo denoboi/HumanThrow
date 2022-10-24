@@ -81,6 +81,9 @@ public class ProjectileShoot : MonoBehaviour
         if (_isGameEnd)
             return;
 
+        if (Player.Instance.IsWin)
+            return;
+
         _timer += Time.deltaTime;
 
         if (_timer >= SpawnRate)

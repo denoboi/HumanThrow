@@ -8,6 +8,7 @@ public class Player : SplineCharacter
 {
     
     public bool IsFailed { get; set; }
+    public bool IsWin { get; set; }
     
     public static Player Instance;
 
