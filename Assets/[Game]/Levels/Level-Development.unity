@@ -636,6 +636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpreadShot Gate
       objectReference: {fileID: 0}
+    - target: {fileID: 5990283791236320588, guid: 60fb289ab824f3b45a947db94e37699c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5990283791236320589, guid: 60fb289ab824f3b45a947db94e37699c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1195,7 +1199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795478950}
-  m_LocalRotation: {x: 0.3751932, y: -0.000000029685172, z: 0.000000012015443, w: 0.92694664}
+  m_LocalRotation: {x: 0.3751932, y: -0.000000029685168, z: 0.000000012015442, w: 0.92694664}
   m_LocalPosition: {x: 0, y: 4.34, z: -2.3200002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10305,11 +10309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4950003524820246122, guid: 2969e5c17ede9fa4f911e8db990d2f5d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000029685172
+      value: -0.000000029685168
       objectReference: {fileID: 0}
     - target: {fileID: 4950003524820246122, guid: 2969e5c17ede9fa4f911e8db990d2f5d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000012015443
+      value: 0.000000012015442
       objectReference: {fileID: 0}
     - target: {fileID: 4950003524820246122, guid: 2969e5c17ede9fa4f911e8db990d2f5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
