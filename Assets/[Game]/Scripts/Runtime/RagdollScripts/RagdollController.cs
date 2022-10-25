@@ -38,7 +38,7 @@ public class RagdollController : MonoBehaviour
     }
 
     [Button]
-    public void EnableRagdollWithForce(Vector3 forceAxis, float forceAmount)
+    public void EnableRagdollWithForce(Vector3 forceAxis, float forceAmount, ForceMode forceMode)
     {
         Ragdoll[] ragdolls = GetComponentsInChildren<Ragdoll>();
 
@@ -57,7 +57,7 @@ public class RagdollController : MonoBehaviour
         {
             ragdoll.GetComponent<Collider>().isTrigger = false;
             ragdoll.GetComponent<Rigidbody>().isKinematic = false;
-            ragdoll.GetComponent<Rigidbody>().AddForce(forceAxis * forceAmount);
+            ragdoll.GetComponent<Rigidbody>().AddForce(forceAxis * forceAmount, forceMode);
         }
     }
 
