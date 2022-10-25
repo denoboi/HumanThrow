@@ -20,7 +20,7 @@ public class FinalTarget : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Player _player = other.GetComponentInParent<Player>();
-        Projectile projectile = other.GetComponent<Projectile>();
+        Projectile projectile = other.GetComponentInParent<Projectile>();
         if (_player != null)
         {
             
