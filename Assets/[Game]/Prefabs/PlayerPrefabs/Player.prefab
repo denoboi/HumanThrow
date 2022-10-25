@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 6595753555980448695}
   - component: {fileID: 394108616512946055}
   - component: {fileID: 2783787231824585096}
+  - component: {fileID: 1468997756411925610}
   - component: {fileID: 146559426535993470}
   m_Layer: 0
   m_Name: Player
@@ -242,6 +243,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTime: 0.2
+--- !u!114 &1468997756411925610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146559426535993469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ac87fea1e2d5e4392fed994b73be1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &146559426535993470
 MonoBehaviour:
   m_ObjectHideFlags: 0

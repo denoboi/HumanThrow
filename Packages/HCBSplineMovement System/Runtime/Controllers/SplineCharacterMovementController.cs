@@ -64,6 +64,7 @@ namespace HCB.SplineMovementSystem
                 return;
             
             SplineFollower.Move(_currentSpeed * Time.deltaTime);
+            
         }
         public void Jump(float jumpForce)
         {           
