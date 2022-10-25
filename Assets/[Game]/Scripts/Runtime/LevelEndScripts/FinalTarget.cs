@@ -52,7 +52,7 @@ public class FinalTarget : MonoBehaviour
         if (_durability == 0)
         {
             Destroy(_collider);
-            transform.DOLocalRotate(new Vector3(90, 0, 0), 0.2f);
+            transform.DOLocalRotate(new Vector3(-90, 180, 0), 0.2f);
             _durabilityText.gameObject.SetActive(false);
             
         }
