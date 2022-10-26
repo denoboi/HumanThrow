@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using HCB.Core;
 using UnityEngine;
 using Sirenix.OdinInspector;
@@ -12,6 +13,8 @@ public class ProjectileMove : MonoBehaviour
     {
         get { return _projectile == null ? _projectile = GetComponentInChildren<Projectile>() : _projectile; }
     }
+
+    
 
     private void OnEnable()
     {

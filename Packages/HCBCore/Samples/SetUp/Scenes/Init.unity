@@ -232,6 +232,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3852596844440083328, guid: be7ab4ea17deb4302aa989047f4d0ce7, type: 3}
+      propertyPath: _income
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b804168facae314685aac68f51ebaee, type: 2}
+    - target: {fileID: 3852596844440083328, guid: be7ab4ea17deb4302aa989047f4d0ce7, type: 3}
+      propertyPath: _fireRate
+      value: 
+      objectReference: {fileID: 11400000, guid: a3ce432311ce4b843bcb38ad257f82cc, type: 2}
+    - target: {fileID: 3852596844440083328, guid: be7ab4ea17deb4302aa989047f4d0ce7, type: 3}
+      propertyPath: _fireRange
+      value: 
+      objectReference: {fileID: 11400000, guid: e99193a59284788489af1fa225139758, type: 2}
     - target: {fileID: 8475320320636346290, guid: be7ab4ea17deb4302aa989047f4d0ce7, type: 3}
       propertyPath: m_Name
       value: Managers

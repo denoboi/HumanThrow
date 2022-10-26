@@ -8,7 +8,8 @@ using UnityEngine;
 public class PlayerFireRange : IdleStatObjectBase
 {
     public static PlayerFireRange Instance;
-    public float DestroyTime;
+    public float DestroyTime { get; set; }
+    private const float INCREASE_AMOUNT = .3f;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class PlayerFireRange : IdleStatObjectBase
     {
        
         HCB.Core.EventManager.OnFireRangeGateInteracted.AddListener(IncreaseProjectileRange);
+        LevelManager.Instance.OnLevelStart.AddListener(SetInitialProjectileRange);
+        
     }
 
     private void OnDisable()
@@ -28,6 +31,8 @@ public class PlayerFireRange : IdleStatObjectBase
             return;
        
         HCB.Core.EventManager.OnFireRangeGateInteracted.RemoveListener(IncreaseProjectileRange);
+        LevelManager.Instance.OnLevelStart.AddListener(SetInitialProjectileRange);
+
     }
 
     public override void UpdateStat(string id)
@@ -35,8 +40,12 @@ public class PlayerFireRange : IdleStatObjectBase
         throw new NotImplementedException();
     }
 
-
     private void IncreaseProjectileRange()
+    {
+        DestroyTime += INCREASE_AMOUNT;
+    }
+
+    private void SetInitialProjectileRange()
     {
         DestroyTime = (float)IdleStat.CurrentValue;
     }

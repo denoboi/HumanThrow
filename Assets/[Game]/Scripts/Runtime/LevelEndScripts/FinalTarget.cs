@@ -43,10 +43,11 @@ public class FinalTarget : MonoBehaviour
     }
     void FireControl(GameObject bullet)
     {
-        DOTween.Kill(bullet.transform);
-        Destroy(bullet);
+        //DOTween.Kill(bullet.transform);
+        //Destroy(bullet);
         
         _durability--;
+        HapticManager.Haptic(HapticTypes.RigidImpact);
         _durabilityText.text = _durability.ToString();
 
         if (_durability == 0)

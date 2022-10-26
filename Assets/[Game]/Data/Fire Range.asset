@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Fire Range
   m_EditorClassIdentifier: 
   StatID: FIRE RANGE
-  InitialValue: 1
-  UpgradeMultiplier: 1.2
+  InitialValue: 0.1
+  UpgradeMultiplier: 0.1
   InitialCost: 40
   CostMultiplier: 1.1
   ExchangeType: 1
