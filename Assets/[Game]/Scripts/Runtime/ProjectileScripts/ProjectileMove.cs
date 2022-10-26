@@ -44,8 +44,8 @@ public class ProjectileMove : MonoBehaviour
     {
         //if (!_canShoot) return;
         
-        Rigidbody.AddForce(Vector3.forward * _speed, ForceMode.Impulse); 
-      // GetComponent<RagdollController>().EnableRagdollWithForce(Vector3.forward, _speed);
+        //Rigidbody.AddForce(Projectile.Direction * _speed, ForceMode.Impulse); 
+      GetComponent<RagdollController>().EnableRagdollWithForce(Projectile.Direction, _speed, ForceMode.Impulse);
         
     }
     

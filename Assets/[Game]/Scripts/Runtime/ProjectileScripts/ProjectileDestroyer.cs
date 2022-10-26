@@ -7,6 +7,17 @@ using UnityEngine;
 
 public class ProjectileDestroyer : MonoBehaviour
 {
+    
+    private float _timer = 0;
+
+    private Rigidbody _rigidbody;
+
+    public Rigidbody Rigidbody => _rigidbody == null ? _rigidbody = GetComponentInParent<Rigidbody>() : _rigidbody;
+    private void Start()
+    {
+        Rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
+    }
+
     private Projectile _projectile;
     
     public Projectile Projectile
@@ -15,7 +26,7 @@ public class ProjectileDestroyer : MonoBehaviour
     }
     private void OnEnable()
     {
-       
+      
 
     }
 
@@ -25,9 +36,29 @@ public class ProjectileDestroyer : MonoBehaviour
             return;
      
         
+
     }
 
-   
+    private void Update()
+    {
+        DestroyProjectile();
+    }
+
+
+    private void DestroyProjectile()
+    {
+        
+
+        _timer += Time.deltaTime;
+
+        if (_timer >= PlayerFireRange.Instance.DestroyTime)
+        {
+            Rigidbody.constraints = RigidbodyConstraints.None;
+            
+            _timer = 0;
+        }
+    }
+    
     
    
 }

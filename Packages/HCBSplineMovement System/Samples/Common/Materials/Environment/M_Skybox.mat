@@ -66,7 +66,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EmissionScaleUI: 0
-    - _Exponent1: 1
+    - _Exponent1: 4.94
     - _Exponent2: 3
     - _Exposure: 5.94
     - _Glossiness: 0.5
@@ -84,8 +84,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
-    - _Color2: {r: 0.3803922, g: 0.6744039, b: 1, a: 1}
-    - _Color3: {r: 0.5019608, g: 0.7756388, b: 1, a: 0}
+    - _Color2: {r: 0.11372549, g: 0.8, b: 1, a: 1}
+    - _Color3: {r: 0, g: 0.3372549, b: 0.6117647, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
     - _GroundColor: {r: 0.07586193, g: 0, b: 1, a: 1}

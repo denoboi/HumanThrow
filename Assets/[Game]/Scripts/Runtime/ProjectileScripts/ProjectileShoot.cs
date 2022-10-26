@@ -18,6 +18,24 @@ public class ProjectileShoot : MonoBehaviour
         }
     }
 
+    private PlayerFireRate _playerFireRate;
+
+    public PlayerFireRate PlayerFireRate => _playerFireRate == null
+        ? _playerFireRate = GetComponentInParent<PlayerFireRate>()
+        : _playerFireRate;
+    
+    private PlayerSpreadShot _playerSpreadShot;
+
+    public PlayerSpreadShot PlayerSpreadShot
+    {
+        get
+        {
+            return _playerSpreadShot == null
+                ? _playerSpreadShot = GetComponentInChildren<PlayerSpreadShot>()
+                : _playerSpreadShot;
+        }
+    }
+
     
     private bool _isGameStarted;
     private bool _isGameEnd;
@@ -52,7 +70,7 @@ public class ProjectileShoot : MonoBehaviour
 
     private void ProjectileSpawnRate()
     {
-       // SpawnRate = 1 / PlayerFireRate.FireRate;
+       SpawnRate = 1 / PlayerFireRate.FireRate;
     }
 
     private void SpawnProjectile()
@@ -63,15 +81,18 @@ public class ProjectileShoot : MonoBehaviour
         if (_isGameEnd)
             return;
 
+        if (Player.Instance.IsWin)
+            return;
+
         _timer += Time.deltaTime;
 
         if (_timer >= SpawnRate)
         {
             ProjectileCreator.CreateProjectile();
 
-            //if (PlayerSpreadShot.IsSpreadShotEnabled)
+            if (PlayerSpreadShot.IsSpreadShotEnabled)
             {
-               // PlayerSpreadShot.SpreadShotSpawn();
+                PlayerSpreadShot.SpreadShotSpawn();
             }
 
             _timer = 0;

@@ -19,13 +19,13 @@ public class ProjectileCreator : MonoBehaviour
 
     public Projectile CreateProjectile()
     {
-        if (Player.IsFailed)
+        if (Player.IsFailed || Player.IsWin)
             return null;
 
         Projectile projectile = Instantiate(_projectile, _projectileSpawnPoint.position, _projectile.transform.rotation)
             .GetComponentInChildren<Projectile>();
         
-        projectile.Initialize();
+        projectile.Initialize(Vector3.forward);
         
         return projectile;
     }
