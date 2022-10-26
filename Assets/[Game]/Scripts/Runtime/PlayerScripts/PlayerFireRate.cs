@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using HCB.Core;
+using HCB.IncrimantalIdleSystem;
 using UnityEngine;
 
-public class PlayerFireRate : MonoBehaviour
+public class PlayerFireRate : IdleStatObjectBase
 {
     private Player _player;
     private Player Player => _player == null ? _player = GetComponentInParent<Player>() : _player;   
@@ -14,18 +15,24 @@ public class PlayerFireRate : MonoBehaviour
 
     private const float MAX_FIRE_RATE = 100f;
     private const float INCREASE_AMOUNT = 1f;
-
+    
+    
 
     private void OnEnable()
     {
         HCB.Core.EventManager.OnFireRateGateInteracted.AddListener(IncreaseFireRate);
-
+        
     }
 
     private void OnDisable()
     {
         HCB.Core.EventManager.OnFireRateGateInteracted.RemoveListener(IncreaseFireRate);
 
+    }
+
+    public override void UpdateStat(string id)
+    {
+        FireRate = (float)IdleStat.CurrentValue;
     }
 
     private void IncreaseFireRate()
