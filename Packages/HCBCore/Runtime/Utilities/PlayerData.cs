@@ -13,7 +13,7 @@ namespace HCB.Utilities
         public PlayerData()
         {
             CurrencyData = new Dictionary<ExchangeType, double>();
-            CurrencyData[ExchangeType.Coin] = 0;            
+            CurrencyData[ExchangeType.Coin] = 5400;            
         }
 
         private Dictionary<ExchangeType, double> currencyData = new Dictionary<ExchangeType, double>();

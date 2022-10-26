@@ -1,19 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using HCB.IncrimantalIdleSystem;
 using HCB.Utilities;
 using UnityEngine;
 
 public class UpgradeManager : Singleton<UpgradeManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private IdleStat _fireRate;
+    [SerializeField] private IdleStat _fireRange;
+    [SerializeField] private IdleStat _income;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public IdleStat FireRate => _fireRate;
+    public IdleStat FireRange => _fireRange;
+    public IdleStat Income => _income;
+    
+
+
+
+
+
 }
