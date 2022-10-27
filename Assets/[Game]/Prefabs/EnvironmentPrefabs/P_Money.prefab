@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 5842266702163778164}
   - component: {fileID: 3589322956624998979}
   - component: {fileID: 1920605912463302465}
+  - component: {fileID: 4969176734660557631}
   m_Layer: 0
   m_Name: P_Money
   m_TagString: Untagged
@@ -184,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aba2e54813639242b42701730bdddef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectEffectPrefab: {fileID: 0}
+  CollectEffectPrefab: {fileID: 100238, guid: 26fd612d281730243a5cb8e108261552, type: 3}
   OnInitialized:
     m_PersistentCalls:
       m_Calls: []
@@ -204,6 +205,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _body: {fileID: 1475727789646902892}
+--- !u!114 &4969176734660557631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006345843782631295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85b800d2a65e7c4188deb3c840bf5e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleStat: {fileID: 11400000, guid: 2b804168facae314685aac68f51ebaee, type: 2}
 --- !u!1 &6494717350923251444
 GameObject:
   m_ObjectHideFlags: 0
