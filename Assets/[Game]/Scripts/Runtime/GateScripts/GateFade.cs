@@ -91,7 +91,7 @@ public class GateFade : MonoBehaviour
 
     private void SetVisualRendererAlpha(float alpha) 
     {
-        Color color = _propertyBlock.GetColor("_Color");
+        Color color = _propertyBlock.GetColor("_Color"); //material degistirirken perf artirmak icin
         color.a = alpha;
 
         _propertyBlock.SetColor("_Color", color);

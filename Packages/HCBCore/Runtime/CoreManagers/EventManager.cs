@@ -21,6 +21,9 @@ namespace HCB.Core
         public static UnityEvent OnFireRateGateInteracted = new UnityEvent();
         public static UnityEvent OnSpreadShotGateInteracted = new UnityEvent();
         public static UnityEvent OnFireRangeGateInteracted = new UnityEvent();
+        
+        public static UnityEvent OnMoneyEarned = new UnityEvent();
+
 
 
         #region Editor
