@@ -37,7 +37,7 @@ namespace HCB.SplineMovementSystem
         private bool _applyRotationY;
         private bool _applyRotationZ;
 
-        private float _currentSpeed;
+        public float _currentSpeed;
         private void Awake()
         {
             SetupDefaultValues();

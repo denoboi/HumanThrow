@@ -23,8 +23,8 @@ namespace HCB.Core
         public static UnityEvent OnFireRangeGateInteracted = new UnityEvent();
         
         public static UnityEvent OnMoneyEarned = new UnityEvent();
-
-
+        public static UnityEvent OnEnteredEndGame = new UnityEvent();
+        
 
         #region Editor
         public static UnityEvent OnLevelDataChange = new UnityEvent();
