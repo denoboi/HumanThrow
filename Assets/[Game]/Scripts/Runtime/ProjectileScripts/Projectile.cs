@@ -18,6 +18,11 @@ public class Projectile : MonoBehaviour
     
     [HideInInspector]
     public UnityEvent OnInitialized = new UnityEvent();
+    
+    [HideInInspector]
+    public UnityEvent OnKilled = new UnityEvent();
+    
+    
 
     
     public Vector3 Direction { get; private set; }

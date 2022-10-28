@@ -1,0 +1,32 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using HCB.Core;
+using Sirenix.Utilities.Editor;
+using UnityEngine;
+
+public class FinishLine : MonoBehaviour
+{
+    public static FinishLine Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public bool IsEndGame { get; private set; }
+    private void OnTriggerEnter(Collider other)
+    {
+        Interactor player = other.GetComponentInParent<Interactor>();
+
+        PlayerAnimations playerAnimations = other.GetComponentInParent<PlayerAnimations>();
+
+        if (player != null)
+        {
+           
+            HCB.Core.EventManager.OnEnteredEndGame.Invoke();
+            IsEndGame = true;
+
+        }
+    }
+}
