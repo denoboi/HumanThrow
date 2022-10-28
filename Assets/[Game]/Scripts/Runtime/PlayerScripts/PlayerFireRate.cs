@@ -27,6 +27,8 @@ public class PlayerFireRate : MonoBehaviour
 
     private void OnDisable()
     {
+        if (Managers.Instance == null)
+            return;
         HCB.Core.EventManager.OnFireRateGateInteracted.RemoveListener(IncreaseFireRate);
         LevelManager.Instance.OnLevelStart.RemoveListener(SetInitialFireRate);
 

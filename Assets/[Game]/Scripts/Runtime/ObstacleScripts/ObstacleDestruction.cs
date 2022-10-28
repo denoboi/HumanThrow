@@ -14,11 +14,16 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
 
     public int ObstacleLevel = 3;
 
+    private bool _isDestructed;
+
     private BoxCollider _collider;
     public BoxCollider Collider => _collider == null ? _collider = GetComponentInChildren<BoxCollider>() : _collider;
     
     [HideInInspector]
     public UnityEvent OnHit = new UnityEvent();
+    
+    [HideInInspector]
+    public UnityEvent OnObstacleDestroyed = new UnityEvent();
 
     private bool _isCollided { get; set; }
     
@@ -39,6 +44,10 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
     [Button]
     public void DestructObsacle()
     {
+        if (_isDestructed)
+            return;
+        
+        _isDestructed = true;
         Collider.enabled = false;
         foreach (var obstacle in _obstaclePieces)
         {
@@ -48,7 +57,7 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
 
         }
 
-        
+        OnObstacleDestroyed.Invoke();
         HapticManager.Haptic(HapticTypes.RigidImpact);
     }
     

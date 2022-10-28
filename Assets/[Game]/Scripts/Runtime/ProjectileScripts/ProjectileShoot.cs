@@ -95,6 +95,7 @@ public class ProjectileShoot : MonoBehaviour
                 PlayerSpreadShot.SpreadShotSpawn();
             }
 
+            HCB.Core.EventManager.OnShoot.Invoke();
             _timer = 0;
         }
     }

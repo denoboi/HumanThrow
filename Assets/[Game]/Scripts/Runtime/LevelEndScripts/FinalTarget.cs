@@ -19,13 +19,13 @@ public class FinalTarget : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Player _player = other.GetComponentInParent<Player>();
+        Interactor _player = other.GetComponentInParent<Interactor>();
         Projectile projectile = other.GetComponentInParent<Projectile>();
         if (_player != null)
         {
             
             Destroy(_collider);
-            _player.IsWin = true;
+            Player.Instance.IsWin = true;
             GameManager.Instance.OnStageSuccess.Invoke();
         }
 

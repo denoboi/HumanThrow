@@ -9,10 +9,16 @@ namespace HCB.CollectableSystem
     {
         public GameObject CollectEffectPrefab;
 
+        private bool _canCollect = true;
+        public virtual bool CanCollect { get => _canCollect; protected set => _canCollect = value; }
+
         public virtual void Collect(Collector collector)
         {
             if (CollectEffectPrefab != null)
             {
+                GameObject particleObject = Instantiate(CollectEffectPrefab, transform.position, transform.rotation);
+                particleObject.transform.SetParent(collector.transform);
+                
                 ParticleSystem collectEffect = Instantiate(CollectEffectPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
                 var main = collectEffect.main;
                 main.stopAction = ParticleSystemStopAction.Destroy;
