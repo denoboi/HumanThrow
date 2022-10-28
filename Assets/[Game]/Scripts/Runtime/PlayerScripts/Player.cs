@@ -26,7 +26,7 @@ public class Player : SplineCharacter
 
         base.OnEnable();
         
-       // HCB.Core.EventManager.OnPlayerFailed.AddListener(OnLevelEnd);
+       HCB.Core.EventManager.OnPlayerFailed.AddListener(OnLevelEnd);
         //HCB.Core.EventManager.OnPlayerUpgraded.AddListener((() => CreateParticle(UPGRADE_PARTICLE_ID)));
         HCB.Core.EventManager.OnEnteredEndGame.AddListener(SetSpeed);
 
@@ -39,7 +39,8 @@ public class Player : SplineCharacter
             return;
 
         base.OnDisable();
-        
+        HCB.Core.EventManager.OnPlayerFailed.AddListener(OnLevelEnd);
+
         HCB.Core.EventManager.OnEnteredEndGame.RemoveListener(SetSpeed);
 
         
@@ -48,7 +49,7 @@ public class Player : SplineCharacter
 
     private void SetSpeed()
     {
-        MovementController._currentSpeed = 5f;
+        MovementController._currentSpeed = 6f;
     }
 
     private void Awake()

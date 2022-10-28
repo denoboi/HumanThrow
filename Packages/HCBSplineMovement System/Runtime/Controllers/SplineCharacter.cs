@@ -128,7 +128,7 @@ namespace HCB.SplineMovementSystem
             CanMoveForward = true;
         }
 
-        private void OnLevelEnd()
+        protected virtual void OnLevelEnd()
         {
             IsControlable = false;
             CanMoveForward = false;
