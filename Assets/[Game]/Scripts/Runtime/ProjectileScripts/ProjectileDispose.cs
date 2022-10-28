@@ -12,8 +12,8 @@ public class ProjectileDispose : MonoBehaviour
     private Projectile _projectile;
     private Projectile Projectile => _projectile ??= GetComponentInParent<Projectile>();  
 
-    private const float FADE_DURATION = 3f;
-    private const float FADE_DELAY = 1.5f;
+    private const float FADE_DURATION = .3f;
+    private const float FADE_DELAY = 2f;
     private const float MIN_FADE = 0f;
 
     private string _fadeTweenID;
