@@ -15,6 +15,14 @@ public class ProjectileDestroyer : MonoBehaviour
     public Rigidbody Rigidbody => _rigidbody == null ? _rigidbody = GetComponentInParent<Rigidbody>() : _rigidbody;
 
     private List<Rigidbody> _rigidbodies;
+    
+    private Projectile _projectile;
+
+    public Projectile Projectile
+    {
+        get { return _projectile == null ? _projectile = GetComponentInChildren<Projectile>() : _projectile; }
+    }
+
 
     public List<Rigidbody> Rigidbodies =>
         _rigidbodies ??= GetComponentsInChildren<Rigidbody>().ToList();
@@ -27,42 +35,35 @@ public class ProjectileDestroyer : MonoBehaviour
         }
     }
 
-    private Projectile _projectile;
-
-    public Projectile Projectile
-    {
-        get { return _projectile == null ? _projectile = GetComponentInChildren<Projectile>() : _projectile; }
-    }
-
+    
 
     private void OnEnable()
     {
+        Projectile.OnInitialized.AddListener(StartDestroy);
     }
-
+    
     private void OnDisable()
     {
         if (Managers.Instance == null)
             return;
+        Projectile.OnInitialized.RemoveListener(StartDestroy);
     }
 
-    private void Update()
+    private void StartDestroy()
     {
-        DestroyProjectile();
+        Run.After(PlayerFireRange.Instance.DestroyTime, DestroyProjectile); //update yerine boyle yap
     }
+
+   
 
 
     private void DestroyProjectile()
     {
-        _timer += Time.deltaTime;
-
-        if (_timer >= PlayerFireRange.Instance.DestroyTime)
+        foreach (var rb in Rigidbodies)
         {
-            foreach (var rb in Rigidbodies)
-            {
-                rb.constraints = RigidbodyConstraints.None;
-            }
-
-            _timer = 0;
+            rb.constraints = RigidbodyConstraints.None;
         }
+        Projectile.OnKilled.Invoke(); //yoksa bug oldu.
+        
     }
 }

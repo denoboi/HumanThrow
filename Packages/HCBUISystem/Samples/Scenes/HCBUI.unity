@@ -620,9 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5396f6fb3dd4fc745b3f4d8b85461836, type: 3}
     - target: {fileID: 2194315033884014988, guid: a36faac94f6d4de47adef22095693512, type: 3}
       propertyPath: m_text
-      value: '43
-
-'
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 2194315033884014988, guid: a36faac94f6d4de47adef22095693512, type: 3}
       propertyPath: m_fontSize
@@ -636,6 +634,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 6389768608202997187, guid: 43ede6c93a9444ba48144c27dea6ab1c, type: 2}
+    - target: {fileID: 2194315033884014988, guid: a36faac94f6d4de47adef22095693512, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2194315033884014995, guid: a36faac94f6d4de47adef22095693512, type: 3}
       propertyPath: m_SizeDelta.x
       value: 51.3124
