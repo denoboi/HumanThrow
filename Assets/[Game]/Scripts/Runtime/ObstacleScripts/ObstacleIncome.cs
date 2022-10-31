@@ -24,12 +24,13 @@ public class ObstacleIncome : MonoBehaviour
     private void OnEnable()
     {
         ObstacleDestruction.OnObstacleDestroyed.AddListener(SpawnMoney);
+     
     }
 
     private void OnDisable()
     {
         ObstacleDestruction.OnObstacleDestroyed.RemoveListener(SpawnMoney);
-
+    
     }
 
     private void SpawnMoney() 

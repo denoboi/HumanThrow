@@ -25,9 +25,10 @@ namespace HCB.Core
         public static UnityEvent OnMoneyEarned = new UnityEvent();
         public static UnityEvent OnEnteredEndGame = new UnityEvent();
         public static UnityEvent OnShoot = new UnityEvent();
+        public static UnityEvent OnPlayerUpgraded = new UnityEvent();
+        
+        public static UnityEvent OnReachedChest = new UnityEvent();
 
-        
-        
 
         #region Editor
         public static UnityEvent OnLevelDataChange = new UnityEvent();

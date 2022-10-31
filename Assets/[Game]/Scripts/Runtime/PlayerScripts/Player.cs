@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using HCB.Core;
+using HCB.PoolingSystem;
 using HCB.SplineMovementSystem;
 using UnityEngine;
 
@@ -18,6 +19,8 @@ public class Player : SplineCharacter
     public SplineCharacterMovementController MovementController => _movementController == null
         ? _movementController = GetComponent<SplineCharacterMovementController>()
         : _movementController;
+
+    private const string UPGRADE_PARTICLE_ID = "UpgradeParticle";
     
     protected override void OnEnable()
     {
@@ -27,7 +30,7 @@ public class Player : SplineCharacter
         base.OnEnable();
         
        HCB.Core.EventManager.OnPlayerFailed.AddListener(OnLevelEnd);
-        //HCB.Core.EventManager.OnPlayerUpgraded.AddListener((() => CreateParticle(UPGRADE_PARTICLE_ID)));
+        HCB.Core.EventManager.OnPlayerUpgraded.AddListener((() => CreateParticle(UPGRADE_PARTICLE_ID)));
         HCB.Core.EventManager.OnEnteredEndGame.AddListener(SetSpeed);
 
         
@@ -45,6 +48,11 @@ public class Player : SplineCharacter
 
         
         
+    }
+    
+    private void CreateParticle(string poolId)
+    {
+        PoolingSystem.Instance.InstantiateAPS(poolId, transform.position).GetComponentInChildren<ParticleSystem>().Play();
     }
 
     private void SetSpeed()

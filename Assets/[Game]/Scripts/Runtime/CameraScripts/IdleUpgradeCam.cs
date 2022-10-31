@@ -14,6 +14,7 @@ public class IdleUpgradeCam : VirtualCameraBase
             return;
 
         SceneController.Instance.OnSceneLoaded.AddListener(ActivateCamera);
+        HCB.Core.EventManager.OnReachedChest.AddListener(ActivateCamera);
     }
 
     protected override void OnDisable()
@@ -23,6 +24,8 @@ public class IdleUpgradeCam : VirtualCameraBase
             return;
 
         SceneController.Instance.OnSceneLoaded.RemoveListener(ActivateCamera);
+        HCB.Core.EventManager.OnReachedChest.RemoveListener(ActivateCamera);
+
     }
 
     private void ActivateCamera() 

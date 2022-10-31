@@ -649,6 +649,9 @@ MonoBehaviour:
   OnHit:
     m_PersistentCalls:
       m_Calls: []
+  OnObstacleDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &7147165485671270237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -701,7 +704,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!1 &2078674972416638170
 GameObject:
   m_ObjectHideFlags: 0

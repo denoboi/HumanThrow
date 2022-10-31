@@ -32,9 +32,7 @@ public class Projectile : MonoBehaviour
     public void Initialize(Vector3 direction)
     {
         Direction = direction;
-       
-        //transform.localScale = new Vector3(0.01f, .01f, .01f);
-       
+
         OnInitialized.Invoke();
     }
 

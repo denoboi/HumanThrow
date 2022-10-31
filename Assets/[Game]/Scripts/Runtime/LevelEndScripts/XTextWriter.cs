@@ -16,7 +16,7 @@ public class XTextWriter : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            transform.GetChild(i).GetComponent<TextMeshProUGUI>().text = "X" + (i + 2).ToString();
+            transform.GetChild(i).GetComponentInChildren<TextMeshProUGUI>().text = "X" + (i + 2).ToString();
         }
 
     }
