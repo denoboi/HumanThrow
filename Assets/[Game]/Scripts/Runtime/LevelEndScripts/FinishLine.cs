@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using HCB.Core;
-using Sirenix.Utilities.Editor;
 using UnityEngine;
 
 public class FinishLine : MonoBehaviour
