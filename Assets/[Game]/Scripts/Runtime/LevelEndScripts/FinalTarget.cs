@@ -32,7 +32,7 @@ public class FinalTarget : MonoBehaviour
             
             Destroy(_collider);
             Player.Instance.IsWin = true;
-            GameManager.Instance.OnStageSuccess.Invoke();
+            GameManager.Instance.CompeleteStage(true);
         }
 
         else if (projectile != null)

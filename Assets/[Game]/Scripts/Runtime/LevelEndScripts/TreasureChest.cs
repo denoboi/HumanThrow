@@ -12,9 +12,10 @@ public class TreasureChest : MonoBehaviour
 
       if (interactor != null)
       {
+         HCB.Core.EventManager.OnReachedChest.Invoke();
          Player.Instance.IsWin = true;
-         GameManager.Instance.OnStageSuccess.Invoke();
-         
+         GameManager.Instance.CompeleteStage(true);
+      
       }
    }
 }

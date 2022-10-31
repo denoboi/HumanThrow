@@ -26,7 +26,7 @@ public class ProjectileCollision : MonoBehaviour
         {
             _isCollided = true;
             HapticManager.Haptic(HapticTypes.SoftImpact);
-//            RagdollController.EnableRagdollWithForce(Vector3.forward, 55);
+
             
             breakable.ObstacleLevel--;
             breakable.OnHit.Invoke();
@@ -39,8 +39,6 @@ public class ProjectileCollision : MonoBehaviour
                 breakable.ObstacleLevel = 0;
                 breakable.DestructObsacle();
                 
-                
-                //Destroy(other.gameObject);
             }
         }
 
