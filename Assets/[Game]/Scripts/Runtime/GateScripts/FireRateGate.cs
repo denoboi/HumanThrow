@@ -6,17 +6,18 @@ using UnityEngine;
 
 public class FireRateGate : GateBase
 {
+  
    private void OnTriggerEnter(Collider other)
    {
-      Interactor splineCharacter = other.GetComponentInParent<Interactor>();
+      Interactor interactor = other.GetComponentInChildren<Interactor>();
 
-      if (splineCharacter != null)
+      if (interactor != null)
       {
          HapticManager.Haptic(HapticTypes.Selection);
-
+         CreateParticle(interactor.transform);
          HCB.Core.EventManager.OnFireRateGateInteracted.Invoke();
-         OnInteracted.Invoke();
          Debug.Log("FireRate");
+        
       }
    }
 }

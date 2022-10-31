@@ -6,17 +6,21 @@ using UnityEngine;
 
 public class FireRangeGate : GateBase
 {
+  
+    
     private void OnTriggerEnter(Collider other)
     {
-        Interactor splineCharacter = other.GetComponentInParent<Interactor>();
+        Interactor interactor = other.GetComponentInChildren<Interactor>();
 
-        if (splineCharacter != null)
+        if (interactor != null)
         {
             HapticManager.Haptic(HapticTypes.RigidImpact);
-
             HCB.Core.EventManager.OnFireRangeGateInteracted.Invoke();
-            OnInteracted.Invoke();
-            Debug.Log("FireRange");
+            CreateParticle(interactor.transform);
+            Debug.Log("FireRange"); 
+         
         }
     }
+    
+    
 }
