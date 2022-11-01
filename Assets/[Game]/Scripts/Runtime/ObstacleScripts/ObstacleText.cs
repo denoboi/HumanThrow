@@ -40,9 +40,5 @@ public class ObstacleText : MonoBehaviour
             Text.text = null;
         }
     }
-
-    void ChangeText()
-    {
-        
-    }
+    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Dreamteck.Splines;
@@ -23,6 +24,18 @@ public class PlayerFail : MonoBehaviour
     private const float PUSH_DURATION = 0.75f;
 
     private Run _pushRun = null;
+
+    private void OnEnable()
+    {
+        HCB.Core.EventManager.OnPlayerFailed.AddListener(StartPushBack);
+    }
+
+    private void OnDisable()
+    {
+        HCB.Core.EventManager.OnPlayerFailed.RemoveListener(StartPushBack);
+    }
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (Player.IsFailed)
@@ -32,10 +45,11 @@ public class PlayerFail : MonoBehaviour
 
         if (breakable != null)
         {
+            HCB.Core.EventManager.OnPlayerFailed.Invoke();
             Player.IsFailed = true;
             StartPushBack();
          
-            HCB.Core.EventManager.OnPlayerFailed.Invoke();
+           
          
             Run.After(1,()=>GameManager.Instance.CompeleteStage(false));
          

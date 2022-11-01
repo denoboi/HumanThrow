@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Levels:
   - LevelTypes: 
-    LoadLevelID: Level-Development
+    LoadLevelID: Level - 1
+  - LevelTypes: 
+    LoadLevelID: Level - 2
+  - LevelTypes: 
+    LoadLevelID: Level - 3
+  - LevelTypes: 
+    LoadLevelID: Level - 4

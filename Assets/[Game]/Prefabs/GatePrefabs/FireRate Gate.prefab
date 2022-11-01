@@ -82,6 +82,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.032
       objectReference: {fileID: 0}
+    - target: {fileID: 3514364501209976930, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+      propertyPath: _visual
+      value: 
+      objectReference: {fileID: 5394924453345133823}
     - target: {fileID: 3724028786150552764, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
       propertyPath: m_Size.x
       value: 5.32
@@ -159,5 +163,10 @@ PrefabInstance:
 --- !u!1 &5572120736467096666 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1240693214334673646, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
+  m_PrefabInstance: {fileID: 6657434802881459892}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5394924453345133823 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1638583052624392779, guid: 5cd6dcb61e7224c4081f40c84e00ea98, type: 3}
   m_PrefabInstance: {fileID: 6657434802881459892}
   m_PrefabAsset: {fileID: 0}
