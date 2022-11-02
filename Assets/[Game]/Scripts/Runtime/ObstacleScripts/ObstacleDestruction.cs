@@ -52,7 +52,7 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
         }
     }
 
-    [Button]
+   
     public void DestructObsacle()
     {
         if (_isDestructed)
