@@ -96,7 +96,7 @@ public class BreakableObstacle : MonoBehaviour
 
             parts[i].GetComponent<Collider>().enabled = true;
 
-            parts[i].transform.DOScale(Vector3.zero, 2f);
+            parts[i].transform.DOScale(Vector3.one * 0.01f, 1.5f);
         }
     }
 }

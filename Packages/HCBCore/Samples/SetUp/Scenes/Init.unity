@@ -171,6 +171,12 @@ MonoBehaviour:
     AllowGrow: 1
     AutoDestroy: 1
     clones: []
+  - ID: BigMoney
+    SourcePrefab: {fileID: 6006345843782631295, guid: c0bd29f4cdc89d845b2d06c9d14e930a, type: 3}
+    MinNumberOfObject: 0
+    AllowGrow: 1
+    AutoDestroy: 1
+    clones: []
   DefaultCount: 10
 --- !u!4 &334324349
 Transform:
