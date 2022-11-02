@@ -64,7 +64,7 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
             
         }
 
-        if (_initialObstacleLevel > 10)
+        if (_initialObstacleLevel >= 10)
         {
             OnBigObstacleDestroyed.Invoke();
         }
