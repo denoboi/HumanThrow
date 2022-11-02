@@ -78,7 +78,7 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
             obstacle.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), Random.Range(-1, 2)) * 200);
 
             shrinkedVector = new Vector3(0.001f, 0.0001f, 0.0001f);
-            obstacle.transform.DOScale(shrinkedVector, 1).SetDelay(2f); // bundan sonra destroylanabilir.
+            obstacle.transform.DOScale(shrinkedVector, 1).SetDelay(2f).OnComplete((() => {obstacle.gameObject.SetActive(false);})); // bundan sonra destroylanabilir.
             
         }
 

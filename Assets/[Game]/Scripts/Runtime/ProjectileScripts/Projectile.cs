@@ -21,10 +21,9 @@ public class Projectile : MonoBehaviour
     
     [HideInInspector]
     public UnityEvent OnKilled = new UnityEvent();
-    
-    
 
-    
+
+  
     public Vector3 Direction { get; private set; }
 
     public float ForceAmount { get; set; }

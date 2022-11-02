@@ -44,6 +44,9 @@ public class ProjectileDispose : MonoBehaviour
             {
                 SetAlpha(renderer, currentAlpha);
             }
+        }).OnComplete(() =>
+        {
+            gameObject.SetActive(false);
         });        
     }
 
