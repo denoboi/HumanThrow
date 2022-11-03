@@ -49,6 +49,8 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
         {
             obstacle.AddComponent<Rigidbody>().isKinematic = true;
             obstacle.AddComponent<MeshCollider>().convex = true;
+
+            obstacle.GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
         }
     }
 
@@ -78,7 +80,7 @@ public class ObstacleDestruction : MonoBehaviour, IBreakable
             obstacle.GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-1, 2), Random.Range(-1, 2), Random.Range(-1, 2)) * 200);
 
             shrinkedVector = new Vector3(0.001f, 0.0001f, 0.0001f);
-            obstacle.transform.DOScale(shrinkedVector, 1).SetDelay(2f).OnComplete((() => {obstacle.gameObject.SetActive(false);})); // bundan sonra destroylanabilir.
+            obstacle.transform.DOScale(shrinkedVector, 1).SetDelay(1.5f).OnComplete((() => {obstacle.gameObject.SetActive(false);})); // bundan sonra destroylanabilir.
             
         }
 
