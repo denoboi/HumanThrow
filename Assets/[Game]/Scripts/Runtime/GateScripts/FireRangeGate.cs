@@ -18,7 +18,8 @@ public class FireRangeGate : GateBase
             HCB.Core.EventManager.OnFireRangeGateInteracted.Invoke();
             CreateParticle(interactor.transform);
             Debug.Log("FireRange"); 
-         
+            
+            OnInteracted.Invoke();
         }
     }
     

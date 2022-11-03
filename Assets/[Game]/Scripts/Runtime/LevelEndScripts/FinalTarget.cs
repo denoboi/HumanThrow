@@ -13,7 +13,7 @@ public class FinalTarget : MonoBehaviour
     public int _durability = 2;
     TextMeshProUGUI _durabilityText;
     
-    
+    private const string BIGMONEY_POOL_ID = "BigMoney";
     private const string MONEY_POOL_ID = "Money";
     private const float SPAWN_OFFSET = 0.5f;
     private const int MONEY_VALUE = 1;
@@ -69,7 +69,7 @@ public class FinalTarget : MonoBehaviour
     private void SpawnMoney() 
     {
         Vector3 spawnPoint = transform.position + Vector3.up * SPAWN_OFFSET;
-        Money money = PoolingSystem.Instance.InstantiateAPS(MONEY_POOL_ID, spawnPoint).GetComponentInChildren<Money>();
+        Money money = PoolingSystem.Instance.InstantiateAPS(BIGMONEY_POOL_ID, spawnPoint).GetComponentInChildren<Money>();
         money.Initialize(MONEY_VALUE);
     }
 }
