@@ -20,6 +20,6 @@ public class SplineRebuildFix : MonoBehaviour
 
     private void OnValidate()
     {
-        //Rebuild();
+        Rebuild();
     }
 }
